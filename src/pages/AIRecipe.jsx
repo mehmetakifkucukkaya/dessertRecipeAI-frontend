@@ -6,14 +6,14 @@ import MakeRecipe from "../components/MakeRecipe";
 const AIRecipe = () => {
   return (
     <div className="flex flex-col min-h-screen justify-between ">
-      <div className="bg-gray-800 h-[80px]">
-        <Navbar isHiddenInfo={true} isHiddenButtons={true} />
+      <div className="h-[80px]">
+        <Navbar />
       </div>
 
       <MakeRecipe />
 
-      <div className="bg-gray-800">
-        <Footer linkTextColors="white" copyrightTextColor="white" />
+      <div>
+        <Footer />
       </div>
     </div>
   );

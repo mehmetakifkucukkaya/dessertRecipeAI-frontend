@@ -5,10 +5,10 @@ import LoginForm from "../components/LoginForm";
 
 const LogIn = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-800">
+    <div className="flex flex-col min-h-screen ">
       {/* Navbar */}
       <div>
-        <Navbar isHiddenInfo={true} isHiddenButtons={true} />
+        <Navbar />
       </div>
 
       {/* Main Content */}
@@ -18,7 +18,7 @@ const LogIn = () => {
 
       {/* Footer */}
       <div>
-        <Footer linkTextColors="black" copyrightTextColor="black" />
+        <Footer />
       </div>
     </div>
   );

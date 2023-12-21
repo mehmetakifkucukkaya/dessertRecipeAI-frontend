@@ -48,8 +48,7 @@ const Hero = () => {
           <DessertCard
             key={index}
             title={dessert.baslik}
-            description={"deneme"}
-            imageUrl={dessert.resimLinki} //
+            imageUrl={dessert.resimLinki}
           />
         ))}
       </Row>

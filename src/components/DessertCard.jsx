@@ -2,7 +2,7 @@ import { Card, Col } from "antd";
 import React from "react";
 const { Meta } = Card;
 
-const DessertCard = ({ title, description, imageUrl }) => (
+const DessertCard = ({ title, imageUrl }) => (
   <Col xs={24} sm={24} md={12} lg={8} xl={6} className="mb-4">
     <Card
       hoverable
@@ -11,7 +11,7 @@ const DessertCard = ({ title, description, imageUrl }) => (
       }}
       cover={<img alt="example" src={imageUrl} />}
     >
-      <Meta title={title} description={description} />
+      <Meta title={title} />
     </Card>
   </Col>
 );

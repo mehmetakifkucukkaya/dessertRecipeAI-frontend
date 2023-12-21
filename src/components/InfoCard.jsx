@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
-//TODO: Link ile yönlendirme yapılacak
+import { Card } from "antd";
+import { Link } from "react-router-dom";
 
 const InfoCard = () => {
   const navigate = useNavigate();
@@ -12,29 +11,51 @@ const InfoCard = () => {
   };
 
   return (
-    <div className="bg-white border rounded-lg text-center p-4 m-2">
-      <h1 className="text-4xl font-bold">Malzemelerinizle Sanat Yapın!</h1>
-      <p className="mt-4 text-2xl text-left">
-        Hoş geldiniz! Sitemizde,{" "}
-        <Link to="/recipes" className="italic underline">
-          hazır tariflerden
-        </Link>{" "}
-        ilham alabilir veya kendi malzemelerinizi kullanarak{" "}
-        <Link to="/makeRecipe" className="italic underline">
-          benzersiz tarifler
-        </Link>{" "}
-        oluşturabilirsiniz.
-      </p>
-      <p className="mt-4 text-2xl text-left">
-        Malzemelerinizi seçin, hayal gücünüzü konuşturun ve mutfakta gerçek bir
-        şef gibi hissederek yemek yapmanın keyfini çıkarın!
-      </p>
-      <button
-        onClick={navigateRecipes}
-        className="mt-4 sm:px-4 bg-gray-400 hover:bg-gray-500 rounded-lg text-lg sm:text-2xl h-12 font-semibold"
+    <div>
+      <Card
+        title="Sitemizde Sizleri Ne Bekliyor ?"
+        headStyle={{
+          textAlign: "center",
+          fontSize: "26px",
+          fontWeight: "bold",
+        }}
       >
-        Hemen Dene !
-      </button>
+        <Card
+          type="inner"
+          title="Hazır Tatlı Tariflerine Erişim"
+          headStyle={{
+            fontSize: "24px",
+            fontWeight: 500,
+          }}
+        >
+          <Link to="/recipes">
+            {" "}
+            <p className="italic text-xl">
+              {" "}
+              Var olan tariflere tüm detayıyla erişim sağlayabilirsiniz.
+            </p>
+          </Link>
+        </Card>
+        <Card
+          style={{
+            marginTop: 16,
+          }}
+          type="inner"
+          title="Benzersiz Tatlı Tarifi Oluşturma"
+          headStyle={{
+            fontSize: "24px",
+            fontWeight: 500,
+          }}
+        >
+          <Link to="/makeRecipe">
+            <p className="italic text-xl">
+              Elinizdeki malzemelerle hangi tatlıyı yapacağınıza karar veremiyor
+              musunuz ? O halde sitemizi kullanın ve kendi benzersiz tarifinizi
+              oluşturarak tatlının tadını çıkarın !
+            </p>
+          </Link>
+        </Card>
+      </Card>
     </div>
   );
 };

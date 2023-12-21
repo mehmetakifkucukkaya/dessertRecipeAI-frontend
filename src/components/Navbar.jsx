@@ -10,7 +10,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
-const Navbar = ({ isHiddenInfo, isHiddenButtons }) => {
+const Navbar = () => {
   const navigate = useNavigate();
 
   const navigateSignUpPage = () => {

@@ -34,7 +34,7 @@ const LoginForm = () => {
   const register = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/auth/register",
+        "http://localhost:5000/api/auth/register",
         {
           username: userName,
           password,

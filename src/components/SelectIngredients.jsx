@@ -1,6 +1,4 @@
-// SelectIngredients.jsx
 const SelectIngredients = ({ label, options, onChange }) => {
-  // Güvenlik kontrolü: options bir dizi değilse boş bir dizi olarak ayarla
   const validOptions = Array.isArray(options) ? options : [];
 
   return (

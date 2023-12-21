@@ -1,0 +1,197 @@
+{
+    "_id": "65849f0da42cfb1c26c2d4ce",
+    "sebzeler": [
+        {
+            "ad": "Havuç",
+            "kategori": "Kök Sebzeler"
+        },
+        {
+            "ad": "Brokoli",
+            "kategori": "Yapraklı Sebzeler"
+        },
+        {
+            "ad": "Domates",
+            "kategori": "Meyve"
+        },
+        {
+            "ad": "Patlıcan",
+            "kategori": "Meyve"
+        },
+        {
+            "ad": "Kabak",
+            "kategori": "Yapraklı Sebzeler"
+        }
+    ],
+    "meyveler": [
+        {
+            "ad": "Elma",
+            "kategori": "Meyve"
+        },
+        {
+            "ad": "Muz",
+            "kategori": "Meyve"
+        },
+        {
+            "ad": "Portakal",
+            "kategori": "Meyve"
+        },
+        {
+            "ad": "Çilek",
+            "kategori": "Meyve"
+        },
+        {
+            "ad": "Ananas",
+            "kategori": "Meyve"
+        }
+    ],
+    "baklagiller": [
+        {
+            "ad": "Mercimek",
+            "kategori": "Baklagil"
+        },
+        {
+            "ad": "Fasulye",
+            "kategori": "Baklagil"
+        },
+        {
+            "ad": "Nohut",
+            "kategori": "Baklagil"
+        },
+        {
+            "ad": "Soya Fasulyesi",
+            "kategori": "Baklagil"
+        },
+        {
+            "ad": "Bezelye",
+            "kategori": "Baklagil"
+        }
+    ],
+    "unlu_mamuller": [
+        {
+            "ad": "Un",
+            "kategori": "Unlu Mamul"
+        },
+        {
+            "ad": "Şeker",
+            "kategori": "Unlu Mamul"
+        },
+        {
+            "ad": "Tuz",
+            "kategori": "Unlu Mamul"
+        },
+        {
+            "ad": "Yumurta",
+            "kategori": "Unlu Mamul"
+        },
+        {
+            "ad": "Mısır Unu",
+            "kategori": "Unlu Mamul"
+        }
+    ],
+    "sut_urunleri": [
+        {
+            "ad": "Süt",
+            "kategori": "Süt Ürünü"
+        },
+        {
+            "ad": "Yoğurt",
+            "kategori": "Süt Ürünü"
+        },
+        {
+            "ad": "Peynir",
+            "kategori": "Süt Ürünü"
+        },
+        {
+            "ad": "Kaymak",
+            "kategori": "Süt Ürünü"
+        },
+        {
+            "ad": "Kefir",
+            "kategori": "Süt Ürünü"
+        }
+    ],
+    "tatlandiricilar": [
+        {
+            "ad": "Bal",
+            "kategori": "Tatlandırıcı"
+        },
+        {
+            "ad": "Şeker",
+            "kategori": "Tatlandırıcı"
+        },
+        {
+            "ad": "Agave Şurubu",
+            "kategori": "Tatlandırıcı"
+        },
+        {
+            "ad": "Bal Molası",
+            "kategori": "Tatlandırıcı"
+        },
+        {
+            "ad": "Akçaağaç Şurubu",
+            "kategori": "Tatlandırıcı"
+        }
+    ],
+    "tahillar": [
+        {
+            "ad": "Yulaf",
+            "kategori": "Tahıl"
+        },
+        {
+            "ad": "Buğday",
+            "kategori": "Tahıl"
+        },
+        {
+            "ad": "Arpa",
+            "kategori": "Tahıl"
+        },
+        {
+            "ad": "Çavdar",
+            "kategori": "Tahıl"
+        },
+        {
+            "ad": "Quinoa",
+            "kategori": "Tahıl"
+        }
+    ],
+    "kuruyemisler": [
+        {
+            "ad": "Badem",
+            "kategori": "Kuruyemiş"
+        },
+        {
+            "ad": "Ceviz",
+            "kategori": "Kuruyemiş"
+        },
+        {
+            "ad": "Fındık",
+            "kategori": "Kuruyemiş"
+        },
+        {
+            "ad": "Kabak Çekirdeği",
+            "kategori": "Kuruyemiş"
+        },
+        {
+            "ad": "Ay Çekirdeği",
+            "kategori": "Kuruyemiş"
+        }
+    ],
+    "sekerler": [
+        {
+            "ad": "Beyaz Şeker",
+            "kategori": "Şeker"
+        },
+        {
+            "ad": "Pudra Şekeri",
+            "kategori": "Şeker"
+        },
+        {
+            "ad": "Kahverengi Şeker",
+            "kategori": "Şeker"
+        },
+        {
+            "ad": "Akçaağaç Şurubu",
+            "kategori": "Şeker"
+        }
+    ]
+}

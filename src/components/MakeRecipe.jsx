@@ -5,15 +5,12 @@ import SelectIngredients from "./SelectIngredients";
 import { Modal, Button } from "antd";
 
 const MakeRecipe = () => {
-  const [etler, setEtler] = useState([]);
   const [sebzeler, setSebzeler] = useState([]);
   const [meyveler, setMeyveler] = useState([]);
   const [baklagiller, setBaklagiller] = useState([]);
   const [unlu_mamuller, setUnluMamuller] = useState([]);
   const [sut_urunleri, setSutUrunleri] = useState([]);
-  const [baharatlar, setBaharatlar] = useState([]);
   const [tatlandiricilar, setTatlandiricilar] = useState([]);
-  const [deniz_urunleri, setDenizUrunleri] = useState([]);
   const [tahillar, setTahillar] = useState([]);
   const [kuruyemisler, setKuruyemisler] = useState([]);
   const [sekerler, setSekerler] = useState([]);
@@ -21,7 +18,6 @@ const MakeRecipe = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [recipeText, setRecipeText] = useState("");
 
-  const [result, setResult] = useState("");
   const [selectedItems, setSelectedItems] = useState({
     malzeme1: [],
     malzeme2: [],
@@ -32,27 +28,21 @@ const MakeRecipe = () => {
     malzeme7: [],
     malzeme8: [],
     malzeme9: [],
-    malzeme10: [],
-    malzeme11: [],
-    malzeme12: [],
   });
 
   //* Malzemeleri çekiyoruz
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/liste")
+      .get("http://localhost:5000/api/liste")
       .then((response) => {
         const data = response.data;
 
-        setEtler(data.etler);
         setSebzeler(data.sebzeler);
         setMeyveler(data.meyveler);
         setBaklagiller(data.baklagiller);
         setUnluMamuller(data.unlu_mamuller);
         setSutUrunleri(data.sut_urunleri);
-        setBaharatlar(data.baharatlar);
         setTatlandiricilar(data.tatlandiricilar);
-        setDenizUrunleri(data.deniz_urunleri);
         setTahillar(data.tahillar);
         setKuruyemisler(data.kuruyemisler);
         setSekerler(data.sekerler);
@@ -62,7 +52,7 @@ const MakeRecipe = () => {
       });
   }, []);
 
-  //* Malzemelerin seçilmeesini sağlayan metot
+  //* Malzemelerin seçilmesini sağlayan metot
   const handleSelection = (event, selectName) => {
     const selectedOptions = Array.from(
       event.target.selectedOptions,
@@ -91,7 +81,7 @@ const MakeRecipe = () => {
     };
 
     axios
-      .post("http://localhost:3001/api/yemektarifial", postData)
+      .post("http://localhost:5000/api/tatlitarifial", postData)
       .then((response) => {
         const { data } = response;
         setRecipeText(data.tarif); // Tarif metnini state'e kaydet
@@ -111,12 +101,6 @@ const MakeRecipe = () => {
 
         <div className="bg-gray-300 p-2 rounded shadow-md w-[500] md:w-[80vw] h-[500px] md:h-[80vh] ">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3">
-            <SelectIngredients
-              value={selectedItems.malzeme1}
-              label="Etler"
-              options={etler}
-              onChange={handleSelection}
-            />
             <SelectIngredients
               value={selectedItems.malzeme2}
               label="Sebzeler"
@@ -148,21 +132,9 @@ const MakeRecipe = () => {
               onChange={handleSelection}
             />
             <SelectIngredients
-              value={selectedItems.malzeme7}
-              label="Baharatlar"
-              options={baharatlar}
-              onChange={handleSelection}
-            />
-            <SelectIngredients
               value={selectedItems.malzeme8}
               label="Tatlandırıcılar"
               options={tatlandiricilar}
-              onChange={handleSelection}
-            />
-            <SelectIngredients
-              value={selectedItems.malzeme9}
-              label="Deniz Ürünleri"
-              options={deniz_urunleri}
               onChange={handleSelection}
             />
             <SelectIngredients

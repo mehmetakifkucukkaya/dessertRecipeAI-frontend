@@ -13,6 +13,7 @@ const InfoCard = () => {
   return (
     <div>
       <Card
+        className="bg-orange-300"
         title="Sitemizde Sizleri Ne Bekliyor ?"
         headStyle={{
           textAlign: "center",
@@ -21,6 +22,7 @@ const InfoCard = () => {
         }}
       >
         <Card
+          className="bg-orange-200"
           type="inner"
           title="Hazır Tatlı Tariflerine Erişim"
           headStyle={{
@@ -37,6 +39,7 @@ const InfoCard = () => {
           </Link>
         </Card>
         <Card
+          className="bg-orange-200"
           style={{
             marginTop: 16,
           }}

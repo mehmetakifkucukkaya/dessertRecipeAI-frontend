@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import InfoCard from "../components/InfoCard";
 import { Divider } from "antd";
-import Foods from "../components/Foods";
 
 const HomePage = () => {
   return (
@@ -14,8 +13,6 @@ const HomePage = () => {
         <Hero />
 
         <InfoCard />
-
-        <Foods />
       </div>
 
       <Divider dashed className="bg-gray-300" />

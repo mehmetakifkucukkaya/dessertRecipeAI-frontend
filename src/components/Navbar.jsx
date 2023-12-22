@@ -40,7 +40,7 @@ const Navbar = () => {
           className="flex items-centerfont-bold text-xl"
         >
           <FaHome className="h-6 w-6 mr-2" />
-          Tatli Tarifleri
+          Dessert Symphony
         </button>
         <div>
           <button

@@ -4,16 +4,18 @@ import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
 import Recipes from "./pages/Recipes";
 import AIRecipe from "./pages/AIRecipe";
+import AdminPanel from "./pages/AdminPanel/adminPanel";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/" element={<HomePage />} /> */}
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/logIn" element={<LogIn />} />
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/makeRecipe" element={<AIRecipe />} />
+        <Route path="/" element={<AdminPanel />} />
       </Routes>
     </Router>
   );

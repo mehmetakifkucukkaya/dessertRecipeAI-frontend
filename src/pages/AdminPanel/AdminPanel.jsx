@@ -3,6 +3,7 @@ import { TbFileDescription } from "react-icons/tb";
 import { PiUsersThreeFill } from "react-icons/pi";
 import { Tabs } from "antd";
 import RecipesPanel from "./RecipesPanel";
+import UsersPanel from "./UsersPanel";
 
 const AdminPanel = () => {
   return (
@@ -20,7 +21,7 @@ const AdminPanel = () => {
               </div>
             }
           >
-            <h2>Kullanıcılar</h2>
+            <UsersPanel />
           </Tabs.TabPane>
 
           <Tabs.TabPane

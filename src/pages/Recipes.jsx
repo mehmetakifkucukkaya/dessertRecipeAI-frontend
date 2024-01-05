@@ -26,6 +26,8 @@ const Recipes = () => {
     fetchData();
   }, []);
 
+
+  
   const openModal = (dessert) => {
     setSelectedDessert(dessert);
     console.log("Modal will be opened");

@@ -10,12 +10,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/" element={<HomePage />} /> */}
+        <Route path="/" element={<HomePage />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/logIn" element={<LogIn />} />
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/makeRecipe" element={<AIRecipe />} />
-        <Route path="/" element={<AdminPanel />} />
+        <Route path="/adminPanel" element={<AdminPanel />} />
       </Routes>
     </Router>
   );

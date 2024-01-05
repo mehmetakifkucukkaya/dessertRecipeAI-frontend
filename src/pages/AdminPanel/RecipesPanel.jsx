@@ -7,6 +7,20 @@ const RecipesPanel = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const deleteRecipe = async (recipeId) => {
+    try {
+      // MongoDB'den tarifi siliyoruz
+      await axios.delete(`http://localhost:5000/api/silTarif/${recipeId}`);
+
+      // state'den siliyoruz
+      setData((prevData) =>
+        prevData.filter((recipe) => recipe.id !== recipeId)
+      );
+    } catch (error) {
+      console.error(error.response.data);
+    }
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -56,7 +70,7 @@ const RecipesPanel = () => {
       key: "action",
       render: (_, record) => (
         <Space size="middle">
-          <a>Delete</a>
+          <a onClick={() => deleteRecipe(record.id)}>Delete</a>
         </Space>
       ),
     },

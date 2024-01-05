@@ -33,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-orange-500 p-4">
+    <nav className="bg-orange-500 p-2">
       <div className="container mx-auto flex justify-between items-center text-black font-semibold">
         <button
           onClick={navigateHomePage}

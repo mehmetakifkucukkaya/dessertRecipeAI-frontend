@@ -4,6 +4,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
+import { Alert } from "antd";
 
 //TODO: Login fonksiyonu yapılacak
 //TODO: Validation yapılacak
@@ -11,6 +12,7 @@ import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
   const navigate = useNavigate();
 
@@ -26,6 +28,10 @@ const LoginForm = () => {
     navigate("/makeRecipe");
   };
 
+  const navigateAdminPanel = () => {
+    navigate("/adminPanel");
+  };
+
   const login = async () => {
     try {
       const response = await axios.post(
@@ -39,15 +45,19 @@ const LoginForm = () => {
 
       if (response.status === 200) {
         const data = response.data;
-        // Handle successful login, e.g., store the token in local storage or state
+
         console.log("Login successful:", data.token);
-        navigateMakeRecipe();
+
+        if (email === "admin@example.com") {
+          navigateAdminPanel();
+        } else {
+          navigateMakeRecipe();
+        }
       } else {
-        // Handle login error, e.g., show an error message
-        console.error("Login failed:", response.data.message);
+        setError(response.data.message);
       }
     } catch (error) {
-      console.error("Login failed:", error.message);
+      setError(error.message);
     }
   };
 
@@ -61,6 +71,19 @@ const LoginForm = () => {
       <div className="mb-8">
         <h1 className="font-semibold text-2xl">Hoş Geldiniz!</h1>
       </div>
+
+      {/* Display error message */}
+      {error && (
+        <Alert
+          message="Error"
+          description={"Kullanıcı adı veya şifre hatalı"}
+          type="error"
+          showIcon
+          closable
+          onClose={() => setError(null)}
+          className="mb-4"
+        />
+      )}
 
       {/* Inputs */}
       <form className="flex flex-col w-full max-w-md">
